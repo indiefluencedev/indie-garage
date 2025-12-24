@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/navigation/Footer";
 import FooterBottomBanner from "@/components/globallyUseComponents/FooterBottomBanner";
+import LenisProvider from "@/components/scroll/lenis/LenisProvider";
 
 const cormorant = Cormorant({
   weight: ["400", "600"],
@@ -26,8 +27,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${cormorant.variable} ${lato.variable} antialiased`}>
-        <Navbar />
-        {children}
+        {/* ✅ LENIS STARTS HERE */}
+        <LenisProvider>
+          {children}
+        </LenisProvider>
         <Footer />
         <FooterBottomBanner />
       </body>

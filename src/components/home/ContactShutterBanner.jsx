@@ -66,7 +66,7 @@ const ContactShutterBanner = () => {
       <style jsx>{`
         @media (min-width: 2000px) {
           .contact-shutter-section {
-            height: 900px;
+            height: 1000px;
           }
           .contact-shutter-text {
             margin-left: 30px;

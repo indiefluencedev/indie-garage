@@ -11,21 +11,19 @@ const navItems = [
 
 const Navbar = () => {
   return (
-    <header className="w-full bg-[#f7f3e8] border-b border-[#7D7D7D]">
-      <div className="grid grid-cols-[1.5fr_repeat(5,1fr)] h-[90px]">
-
+    <header className="w-full bg-[#f7f3e8] border-b border-[#7D7D7D] sticky top-0 z-50">
+      <div className="grid grid-cols-[1.5fr_repeat(5,1fr)] h-[80px]">
         {/* Logo */}
         <div className="flex items-center px-6 border-r border-[#7D7D7D] overflow-hidden">
           <Image
             src="/assets/navbar/inide-grage-logo.svg"
             alt="Indiefluence Garage"
-            width={160}          // 🔥 increased
+            width={160}
             height={80}
             priority
             className=""
           />
         </div>
-
         {/* Nav Items */}
         {navItems.map((item, index) => (
           <div
@@ -41,7 +39,6 @@ const Navbar = () => {
             />
           </div>
         ))}
-
       </div>
     </header>
   );
